@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BuildTarget tool="xtensa" version="1.0">
+    <BuildSettings>
+        <BaseSettings path="project">
+            <PreprocessorOptions>
+                <KeyValueListMapOptions>
+                    <KeyValueListMapEntry>
+                        <key>Defines</key>
+                        <value flag="-D" inheritance="append">
+                            <ListEntry key="CONFIG_FPGA_VERSION" value="0"/>
+                            <ListEntry key="CONFIG_ASIC_VERSION" value="(!CONFIG_FPGA_VERSION)"/>
+                            <ListEntry key="CONFIG_DSP0" value="0"/>
+                            <ListEntry key="CONFIG_DSP1" value="(!CONFIG_DSP0)"/>
+                        </value>
+                    </KeyValueListMapEntry>
+                </KeyValueListMapOptions>
+            </PreprocessorOptions>
+            <CompilerOptions>
+                <SingleFlagMapOptions>
+                    <SingleFlagMapEntry>
+                        <key>OptimizeSpace</key>
+                        <value flag="-Os" use="true"/>
+                    </SingleFlagMapEntry>
+                    <SingleFlagMapEntry>
+                        <key>WarningSetting</key>
+                        <value flag="-Wall" use="true"/>
+                    </SingleFlagMapEntry>
+                </SingleFlagMapOptions>
+                <FlagValueMapOptions>
+                    <FlagValueMapEntry>
+                        <key>Optimization</key>
+                        <value level="2" flag="-O" use="true"/>
+                    </FlagValueMapEntry>
+                    <FlagValueMapEntry>
+                        <key>Debug</key>
+                        <value level="-3" flag="-g" use="true"/>
+                    </FlagValueMapEntry>
+                </FlagValueMapOptions>
+                <StringListMapOptions>
+                    <StringListMapEntry>
+                        <key>CompilerAdditionalOptions</key>
+                        <value flag="" inheritance="append">
+                            <ListEntry>-ffunction-sections -fdata-sections</ListEntry>
+                        </value>
+                    </StringListMapEntry>
+                </StringListMapOptions>
+            </CompilerOptions>
+            <AssemblerOptions>
+                <SingleFlagMapOptions>
+                    <SingleFlagMapEntry>
+                        <key>AssemblerIncludeDebug</key>
+                        <value flag="--gdwarf-2" use="true"/>
+                    </SingleFlagMapEntry>
+                </SingleFlagMapOptions>
+            </AssemblerOptions>
+            <LinkerOptions>
+                <BooleanMapOptions>
+                    <BooleanMapEntry>
+                        <key>GenerateMapFile</key>
+                        <value selected="true"/>
+                    </BooleanMapEntry>
+                    <BooleanMapEntry>
+                        <key>CreateMinsize</key>
+                        <value selected="true"/>
+                    </BooleanMapEntry>
+                </BooleanMapOptions>
+                <StringListMapOptions>
+                    <StringListMapEntry>
+                        <key>LinkerAdditionalOptions</key>
+                        <value flag="" inheritance="append">
+                            <ListEntry>--gc-sections  --entry=_ResetVector</ListEntry>
+                        </value>
+                    </StringListMapEntry>
+                </StringListMapOptions>
+                <LinkerSupport custom="true" key="-mlsp=" value="${xt_build_project_loc}/lsp/RG-2018.9/${xt_build_config}/lsp_kunlun_0618"/>
+            </LinkerOptions>
+        </BaseSettings>
+    </BuildSettings>
+</BuildTarget>

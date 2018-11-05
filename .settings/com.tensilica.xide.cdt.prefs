@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+xtensabuilder/com.tensilica.xide.cdt.prefs.builder.parallel.jobs.optimal=false
+xtensabuilder/com.tensilica.xide.cdt.prefs.builder.parallel.jobs.specified=4
+xtensabuilder/com.tensilica.xide.cdt.prefs.builder.stop.first.build.error=true
+xtensabuilder/projectScope=true

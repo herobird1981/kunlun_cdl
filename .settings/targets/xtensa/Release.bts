@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BuildTarget tool="xtensa" version="1.0">
+    <BuildSettings>
+        <BaseSettings path="project">
+            <CompilerOptions>
+                <FlagValueMapOptions>
+                    <FlagValueMapEntry>
+                        <key>Optimization</key>
+                        <value level="2" flag="-O" use="true"/>
+                    </FlagValueMapEntry>
+                    <FlagValueMapEntry>
+                        <key>Debug</key>
+                        <value level="-3" flag="-g" use="true"/>
+                    </FlagValueMapEntry>
+                </FlagValueMapOptions>
+            </CompilerOptions>
+            <LinkerOptions>
+                <BooleanMapOptions>
+                    <BooleanMapEntry>
+                        <key>CreateMinsize</key>
+                        <value selected="true"/>
+                    </BooleanMapEntry>
+                </BooleanMapOptions>
+                <LinkerSupport custom="false" key="-mlsp=" value="sim"/>
+            </LinkerOptions>
+        </BaseSettings>
+    </BuildSettings>
+</BuildTarget>

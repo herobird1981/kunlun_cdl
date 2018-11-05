@@ -1,0 +1,27 @@
+*.bin
+*.elf
+*.axf
+/bin
+*.o
+*.d
+/.cproject
+/Makefile
+/.settings/autolaunch.info
+#/lsp/**/ldscripts/*.*
+#/.*
+/*_OCD_*.txt*
+*.bak
+*~
+
+# source insight project files
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PFI
+*.PO
+*.PR
+*.PRI
+*.PS
+*.SearchResults
+*.WK3

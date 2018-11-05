@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BuildTarget tool="xtensa" version="1.0">
+    <BuildSettings>
+        <BaseSettings path="project">
+            <PreprocessorOptions>
+                <KeyValueListMapOptions>
+                    <KeyValueListMapEntry>
+                        <key>Defines</key>
+                        <value flag="-D" inheritance="append">
+                            <ListEntry key="__BAD_TARGET__" value=""/>
+                        </value>
+                    </KeyValueListMapEntry>
+                </KeyValueListMapOptions>
+            </PreprocessorOptions>
+            <CompilerOptions>
+                <SingleFlagMapOptions>
+                    <SingleFlagMapEntry>
+                        <key>OptimizeSpace</key>
+                        <value flag="-Os" use="true"/>
+                    </SingleFlagMapEntry>
+                </SingleFlagMapOptions>
+                <FlagValueMapOptions>
+                    <FlagValueMapEntry>
+                        <key>Optimization</key>
+                        <value level="2" flag="-O" use="true"/>
+                    </FlagValueMapEntry>
+                    <FlagValueMapEntry>
+                        <key>Debug</key>
+                        <value level="-3" flag="-g" use="true"/>
+                    </FlagValueMapEntry>
+                </FlagValueMapOptions>
+            </CompilerOptions>
+            <LinkerOptions>
+                <BooleanMapOptions>
+                    <BooleanMapEntry>
+                        <key>CreateMinsize</key>
+                        <value selected="true"/>
+                    </BooleanMapEntry>
+                </BooleanMapOptions>
+                <LinkerSupport custom="false" key="-mlsp=" value="tiny"/>
+            </LinkerOptions>
+        </BaseSettings>
+    </BuildSettings>
+</BuildTarget>
